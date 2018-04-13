@@ -8,6 +8,7 @@ def post_comment(request,post_pk):
     post = get_object_or_404(Post,pk=post_pk)
     if request.method == 'POST':
         form = CommentForm(request.POST)
+        print(form.is_valid())
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = post
