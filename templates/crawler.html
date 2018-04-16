@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>crawler</title>
+</head>
+<body>
+  <form action="/crawler/crawler/" method="post">
+      {% csrf_token %}
+      <input type="submit" value="更新房价数据" />
+  </form>
+</body>
+</html>
